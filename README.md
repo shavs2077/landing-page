@@ -18,9 +18,10 @@ python3 -m http.server 8000
 ```
 index.html                          Toda la página (anclas por sección)
 assets/css/styles.css               Tokens de color/tipografía y estilos
+assets/img/og.jpg                    Vista previa para redes (1200×630)
 assets/js/main.js                   Menú móvil, año del pie y envío del formulario
-assets/img/monserrat-retrato.png    Retrato recortado del banner, fondo transparente
-assets/img/monserrat-guadalajara.jpg Foto ambiente para la sección "Por qué elegí…"
+assets/img/monserrat-retrato.webp    Retrato recortado del banner, fondo transparente
+assets/img/monserrat-guadalajara.webp  Foto ambiente para la sección "Por qué elegí…"
 ```
 
 ## La marca
@@ -54,7 +55,7 @@ la voz ni el fondo.
 
 ## Imágenes
 
-`monserrat-retrato.png` se obtuvo recortando su banner y quitándole el fondo por
+`monserrat-retrato.webp` se obtuvo recortando su banner y quitándole el fondo por
 segmentación (blanco y chevrones fuera, componente conexa mayor dentro). Si aparece
 una foto de estudio con fondo transparente, sustituirla directamente: la portada la
 coloca sobre el papel cálido y no necesita ningún ajuste.
