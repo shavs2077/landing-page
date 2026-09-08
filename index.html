@@ -23,7 +23,8 @@
 
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Outfit:wght@500;600;800&family=Hanken+Grotesk:wght@400;500;600&family=Newsreader:ital,opsz@1,6..72&display=swap">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Outfit:wght@500;600;800&family=Hanken+Grotesk:ital,wght@0,400;0,500;0,600;1,400&display=swap">
+<link rel="preload" as="image" href="assets/img/monserrat-retrato.webp" fetchpriority="high">
 <link rel="stylesheet" href="assets/css/styles.css">
 
 <script type="application/ld+json">
@@ -69,7 +70,7 @@
         <li><a href="#proceso">Cómo trabajo</a></li>
         <li><a href="#preguntas">Preguntas</a></li>
       </ul>
-      <a class="btn btn--oro btn--chico" href="https://wa.me/523331665992" rel="noopener">Escríbeme</a>
+      <a class="btn btn--oro btn--chico" href="https://wa.me/523331665992" rel="noopener">Escríbeme por WhatsApp</a>
     </nav>
   </div>
 </header>
@@ -82,41 +83,23 @@
       <div class="portada__texto">
         <p class="marca">Asegura tu bienestar</p>
         <h1 class="portada__titulo">
-          Hablar de dinero, salud y retiro<br>
-          también es hablar de <span class="subrayado">libertad</span>.
+          Hablar de tu dinero es hablar de tu <span class="subrayado">libertad</span>.
         </h1>
         <p class="entrada">
-          Soy Monserrat Velasco, agente de seguros en Guadalajara. Acompaño a familias —y muy en
-          especial a mujeres— a construir el futuro que quieren vivir: con un plan detrás, no con
-          buena suerte.
+          Soy Monserrat Velasco, agente de seguros en Guadalajara. Acompaño a familias
+          y a mujeres que están construyendo lo suyo.
         </p>
 
         <div class="portada__acciones">
           <a class="btn btn--petroleo" href="https://wa.me/523331665992" rel="noopener">Escríbeme por WhatsApp</a>
           <a class="btn btn--linea" href="#proceso">Cómo trabajo</a>
         </div>
-
-        <ul class="datos">
-          <li>
-            <svg class="ic" aria-hidden="true"><use href="#chevron"></use></svg>
-            <a href="tel:+523331665992">33 3166 5992</a>
-          </li>
-          <li>
-            <svg class="ic" aria-hidden="true"><use href="#chevron"></use></svg>
-            <a href="mailto:contacto@aseguratubienestar.mx">contacto@aseguratubienestar.mx</a>
-          </li>
-          <li>
-            <svg class="ic" aria-hidden="true"><use href="#chevron"></use></svg>
-            <span>Guadalajara, Jalisco</span>
-          </li>
-        </ul>
       </div>
 
       <div class="portada__figura">
         <svg class="geo" viewBox="0 0 400 520" aria-hidden="true" preserveAspectRatio="xMidYMid meet">
           <path d="M196 6l104 104-104 104" fill="none" stroke="var(--oro)" stroke-width="46"/>
           <path d="M292 6l104 104-104 104" fill="none" stroke="var(--sage)" stroke-width="46"/>
-          <path d="M120 74l58 58-58 58" fill="none" stroke="var(--sage)" stroke-width="3" opacity="0.55"/>
         </svg>
         <img class="retrato" src="assets/img/monserrat-retrato.webp" width="615" height="927"
              alt="Monserrat Velasco, agente de seguros en Guadalajara" fetchpriority="high">
@@ -135,17 +118,17 @@
       </header>
 
       <ul class="pilares">
-        <li>
+        <li class="pilar pilar--ancho">
           <svg class="ic ic--oro" aria-hidden="true"><use href="#chevron"></use></svg>
           <h3>Dinero</h3>
           <p>Que tu dinero tenga un destino que tú elegiste, y no el que impuso una urgencia.</p>
         </li>
-        <li>
+        <li class="pilar">
           <svg class="ic ic--oro" aria-hidden="true"><use href="#chevron"></use></svg>
           <h3>Salud</h3>
           <p>Que una hospitalización no se lleve por delante lo que llevas años construyendo.</p>
         </li>
-        <li>
+        <li class="pilar">
           <svg class="ic ic--oro" aria-hidden="true"><use href="#chevron"></use></svg>
           <h3>Retiro</h3>
           <p>Que llegues a los sesenta con opciones sobre la mesa, no con resignación.</p>
@@ -164,11 +147,11 @@
     <div class="ancho voz__caja">
       <blockquote class="cita">
         <p>
-          Con los años entendí que detrás de cada póliza no hay números ni contratos.
-          <em>Hay historias.</em> Familias, sueños, proyectos: un futuro que alguien quiere proteger.
+          Detrás de cada póliza no hay números ni contratos.
+          <strong>Hay historias.</strong>
         </p>
       </blockquote>
-      <p class="cita__firma">Monserrat Velasco</p>
+      <p class="cita__firma">Monserrat Velasco, agente de seguros</p>
     </div>
   </section>
 
@@ -243,23 +226,23 @@
 
       <ol class="pasos">
         <li>
-          <h3><span class="paso__n">01</span> Nos sentamos a platicar</h3>
+          <h3>Nos sentamos a platicar</h3>
           <p>Veinte minutos por teléfono o un café. Qué tienes contratado hoy, quién depende de ti y cuánto puedes destinar al año sin que duela.</p>
         </li>
         <li>
-          <h3><span class="paso__n">02</span> Te llevo un comparativo</h3>
+          <h3>Te llevo un comparativo</h3>
           <p>Opciones reales lado a lado: suma asegurada, deducible, coaseguro, red hospitalaria y prima anual. Sin letras de a seis puntos.</p>
         </li>
         <li>
-          <h3><span class="paso__n">03</span> Contratamos</h3>
+          <h3>Contratamos</h3>
           <p>Solicitud, cuestionario médico y emisión. Los papeles los persigo yo; tú firmas y confirmas datos.</p>
         </li>
         <li>
-          <h3><span class="paso__n">04</span> Te entrego tu póliza explicada</h3>
+          <h3>Te entrego tu póliza explicada</h3>
           <p>Sección por sección, y por escrito: qué hacer, a quién llamar y qué documento pedir el día que la necesites.</p>
         </li>
         <li>
-          <h3><span class="paso__n">05</span> Estoy el día que la usas</h3>
+          <h3>Estoy el día que la usas</h3>
           <p>Programación de cirugía, reembolsos, ajustador. Y cada año, la revisión antes de que renueve sola con condiciones que ya no te sirven.</p>
         </li>
       </ol>
@@ -395,11 +378,13 @@
       <form class="forma" id="forma" data-whatsapp="523331665992" novalidate>
         <div class="campo">
           <label for="f-nombre">Nombre</label>
-          <input id="f-nombre" name="nombre" type="text" autocomplete="name" required placeholder="Como te llaman">
+          <input id="f-nombre" aria-describedby="f-nombre-error" name="nombre" type="text" autocomplete="name" required placeholder="Como te llaman">
+          <p class="campo__error" id="f-nombre-error"></p>
         </div>
         <div class="campo">
           <label for="f-tel">Teléfono o WhatsApp</label>
-          <input id="f-tel" name="telefono" type="tel" autocomplete="tel" inputmode="tel" required placeholder="33 1234 5678">
+          <input id="f-tel" aria-describedby="f-tel-error" name="telefono" type="tel" autocomplete="tel" inputmode="tel" required placeholder="33 1234 5678">
+          <p class="campo__error" id="f-tel-error"></p>
         </div>
         <div class="campo">
           <label for="f-ramo">¿Qué te interesa?</label>

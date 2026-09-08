@@ -1,4 +1,4 @@
-/* Asegura tu bienestar · Monserrat Velasco — interacciones mínimas, sin dependencias. */
+/* Asegura tu bienestar · Monserrat Velasco. Interacciones mínimas, sin dependencias. */
 (function () {
   "use strict";
 
@@ -57,14 +57,23 @@
     var telefono = forma.elements.telefono;
     var faltantes = [];
 
-    [nombre, telefono].forEach(function (campo) {
-      var vacio = campo.value.trim() === "";
-      if (vacio) { campo.setAttribute("aria-invalid", "true"); faltantes.push(campo); }
-      else campo.removeAttribute("aria-invalid");
-    });
+    /* El error va debajo de su propio campo, no en un aviso general. */
+    [[nombre, "Escribe tu nombre."], [telefono, "Escribe un teléfono donde contestarte."]]
+      .forEach(function (par) {
+        var campo = par[0];
+        var error = document.getElementById(campo.id + "-error");
+        if (campo.value.trim() === "") {
+          campo.setAttribute("aria-invalid", "true");
+          if (error) error.textContent = par[1];
+          faltantes.push(campo);
+        } else {
+          campo.removeAttribute("aria-invalid");
+          if (error) error.textContent = "";
+        }
+      });
 
     if (faltantes.length) {
-      aviso.textContent = "Necesito tu nombre y un teléfono para poder contestarte.";
+      aviso.textContent = "";
       faltantes[0].focus();
       return;
     }

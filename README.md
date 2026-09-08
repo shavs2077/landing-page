@@ -53,6 +53,44 @@ independencia y tranquilidad), la cita de "hay historias" y la sección "Por qu�
 esta profesión" salen de sus publicaciones, reescritas para web pero sin cambiarle
 la voz ni el fondo.
 
+## Reglas de diseño que sigue el archivo
+
+La página se auditó contra [taste-skill](https://github.com/Leonxlnx/taste-skill).
+Lo que eso fijó, para que no se pierda al editar:
+
+- **Cero rayas largas.** El guion largo es la firma tipográfica más delatora de
+  texto generado. En su lugar van puntos, comas o dos puntos.
+- **Un solo rótulo.** "Asegura tu bienestar" en la portada es el único texto en
+  mayúsculas con tracking sobre un titular. Las demás secciones arrancan con su
+  titular directo.
+- **Portada de cuatro elementos.** Rótulo, titular de dos líneas, subtítulo de 19
+  palabras y los botones. Nada de microtiras de contacto ni de ciudad debajo: eso
+  vive en la sección de contacto, que es donde se busca.
+- **Un rótulo por intención.** "Escríbeme por WhatsApp" se llama igual en la barra
+  superior y en la portada. Un mismo botón con dos nombres distintos confunde.
+- **Sin serif.** Su identidad no tiene ninguno. El énfasis se hace con peso o
+  cursiva de la misma familia, nunca metiendo otra tipografía en media frase.
+- **Una escala de radios.** Pill (999px) para lo interactivo, 12px para superficies,
+  8px para inputs. Sin valores sueltos.
+- **Nada de tres columnas iguales.** Los pilares son un trío asimétrico de tres
+  celdas exactas, con la celda ancha en fondo propio.
+- **Sin numeración de pasos.** El nombre del paso es la etiqueta.
+- **Errores por campo.** El mensaje va debajo de su input, no en un aviso general.
+- **Un solo momento de movimiento**, la entrada de la portada, que guía el orden de
+  lectura. Todo lo demás son transiciones de hover. Nada de animación por adorno.
+
+Excepciones tomadas a conciencia:
+
+- **El chevrón dibujado a mano.** La skill desaconseja SVG propios, pero este no es
+  un icono decorativo: es la marca gráfica de su banner. Una librería de iconos no
+  la tiene, y el sitio no usa empaquetador.
+- **Los dos bloques petróleo** sobre página clara. Son bloques de color de marca,
+  deliberados y simétricos (propósito y contacto), no un cambio de tema a media
+  página. Los dos temas están tokenizados y probados.
+- **Sitio estático en vez de React y Tailwind.** Para la landing de una agente sola,
+  sin paso de compilación es la decisión correcta: se publica en cualquier hosting
+  y se puede editar sin instalar nada.
+
 ## Imágenes
 
 `monserrat-retrato.webp` se obtuvo recortando su banner y quitándole el fondo por
