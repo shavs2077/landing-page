@@ -1,97 +1,89 @@
-# Monserrat Velasco · Seguros
+# Asegura tu bienestar · Monserrat Velasco
 
-Landing page de una sola vista para **Monserrat Velasco**, agente de seguros
-independiente en Guadalajara, Jalisco.
+Landing page de una sola vista para **Monserrat Velasco**, agente de seguros en
+Guadalajara, Jalisco.
 
-Sitio estático: HTML, CSS y ~90 líneas de JavaScript. Sin framework, sin paso de
+Sitio estático: HTML, CSS y ~100 líneas de JavaScript. Sin framework, sin paso de
 compilación y sin dependencias que instalar.
 
 ## Correr en local
-
-Cualquier servidor estático sirve. Por ejemplo:
 
 ```bash
 python3 -m http.server 8000
 # → http://localhost:8000
 ```
 
-También se puede abrir `index.html` directamente en el navegador.
-
 ## Estructura
 
 ```
-index.html              Toda la página (una sola vista, anclas por sección)
-assets/css/styles.css   Tokens de color/tipografía y estilos
-assets/js/main.js       Menú móvil, año del pie y envío del formulario
-assets/img/             Aquí va la fotografía de Monserrat
+index.html                          Toda la página (anclas por sección)
+assets/css/styles.css               Tokens de color/tipografía y estilos
+assets/js/main.js                   Menú móvil, año del pie y envío del formulario
+assets/img/monserrat-retrato.png    Retrato recortado del banner, fondo transparente
+assets/img/monserrat-guadalajara.jpg Foto ambiente para la sección "Por qué elegí…"
 ```
 
-## Datos provisionales — pendientes de confirmar
+## La marca
 
-La página está armada con contenido de trabajo. Antes de publicarla hay que
-sustituir estos puntos (todos aparecen tal cual en el código, son fáciles de
-buscar):
+Todo está tomado de los materiales de Monserrat, no inventado:
 
-| Qué | Dónde | Marcador actual |
-|---|---|---|
-| Cédula CNSF | `index.html` (hero, credenciales y pie) | `A-XXXXXX` |
-| Número de WhatsApp | `index.html`, atributo `data-whatsapp` del formulario y bloque de contacto | `PENDIENTE` / `+52 33 XXXX XXXX` |
-| Correo | `index.html` y constante `CORREO` en `main.js` | `hola@monserratvelasco.mx` |
-| Fotografía | `assets/img/` | Ver abajo |
-| Aseguradoras | Sección "Cotizo con" | Lista tentativa |
-| Ramos autorizados y horario | Bloque "Datos del agente" | Tentativos |
+| | |
+|---|---|
+| Nombre comercial | Asegura tu bienestar |
+| Sage / petróleo | `#659599` — muestreado de su banner |
+| Mostaza | `#F0CC7E` — muestreado de su banner |
+| Petróleo profundo | `#1E4B52` — campos sólidos |
+| Teléfono | 33 3166 5992 |
+| Correo | contacto@aseguratubienestar.mx |
+| Sitio | www.aseguratubienestar.mx |
+| Ubicación | Guadalajara, Jalisco |
 
-### Fotografía
+**Tipografía.** Outfit para títulos y logotipo (es lo más cercano en Google Fonts a
+la geométrica pesada de su banner), Hanken Grotesk para texto corrido, y Newsreader
+en cursiva reservada exclusivamente para cuando habla ella: la cita y la firma. Que
+la cursiva signifique "su voz" es la única regla tipográfica del sitio.
 
-El hero tiene un plano macizo con las iniciales mientras no haya foto. Para
-poner la real: guarda un retrato vertical (proporción 4:5, mínimo 800×1000 px)
-como `assets/img/monserrat.jpg` y cambia el bloque `.retrato__slot` por:
+**Chevrón.** Es el recurso gráfico de su identidad y aquí es el único que se repite:
+detrás del retrato en la portada, como viñeta de los tres pilares y como flecha del
+acordeón de preguntas. No hay iconos decorativos ni emoji.
 
-```html
-<img class="retrato__slot" src="assets/img/monserrat.jpg"
-     width="800" height="1000" alt="Monserrat Velasco, agente de seguros">
-```
+**La copia es suya.** El titular, los tres pilares (dinero, salud, retiro → libertad,
+independencia y tranquilidad), la cita de "hay historias" y la sección "Por qué elegí
+esta profesión" salen de sus publicaciones, reescritas para web pero sin cambiarle
+la voz ni el fondo.
 
-### Aseguradoras
+## Imágenes
 
-La lista de la franja "Cotizo con" es tentativa. Hay que dejar únicamente las
-compañías con las que Monserrat tenga contrato de agente vigente, y revisar los
-lineamientos de uso de marca de cada una si en algún momento se usan logotipos
-en vez de texto.
+`monserrat-retrato.png` se obtuvo recortando su banner y quitándole el fondo por
+segmentación (blanco y chevrones fuera, componente conexa mayor dentro). Si aparece
+una foto de estudio con fondo transparente, sustituirla directamente: la portada la
+coloca sobre el papel cálido y no necesita ningún ajuste.
+
+## Pendientes
+
+Sólo quedan dos:
+
+- **Cédula CNSF.** No aparece en los materiales. Conviene mostrarla; el lugar natural
+  es junto a los datos de contacto en el pie.
+- **Aseguradoras.** No hay una franja de "cotizo con" porque no se pudo confirmar con
+  qué compañías tiene contrato vigente. Si se quiere agregar, revisar además los
+  lineamientos de marca de cada aseguradora antes de usar logotipos.
 
 ## Formulario
 
-No hay backend. El formulario compone el mensaje con lo que la persona escribió
-y lo abre en WhatsApp (`wa.me`). Mientras `data-whatsapp` siga en `PENDIENTE`,
-cae al correo con el mismo mensaje ya redactado, así que funciona desde ahora.
-
-Si más adelante se quiere recibir los envíos por correo con un servicio (Formspree,
-Netlify Forms y similares), el punto a cambiar es el `submit` en `main.js`.
-
-## Decisiones de diseño
-
-- **Paleta de cantera.** El neutro de fondo lleva un sesgo rosado hacia el
-  acento, en lugar del gris plano de plantilla. El plano carmín (`#8C2242`)
-  toma la idea de los muros macizos de color de la arquitectura tapatía, y
-  aparece dos veces: retrato y contacto. No se usa azul de aseguradora.
-- **Tipografía.** Piazzolla (Huerta Tipográfica) para títulos, Archivo para
-  texto e IBM Plex Mono para cédula, numeración y etiquetas — los seguros son
-  papeleo, y los números deberían verse como documento.
-- **Nada de tarjetas por default.** Los ramos son un índice con filetes; la
-  comparación es una tabla real; el proceso lleva numeración sólo porque
-  contratar una póliza sí es una secuencia.
-- **Vocabulario propio del ramo.** Deducible, coaseguro y su tope, tabulador,
-  preexistencias, carta de antigüedad, periodo de gracia de 30 días naturales
-  (Ley sobre el Contrato de Seguro). Es el contenido que distingue a una agente
-  de un formulario de cotización.
+No hay backend. El formulario redacta el mensaje con lo que la persona escribió y lo
+abre en WhatsApp (`wa.me/523331665992`); si algún día se vacía el atributo
+`data-whatsapp`, cae solo al correo con el mismo texto ya listo. Para recibir los
+envíos por un servicio (Formspree, Netlify Forms), el punto a cambiar es el `submit`
+en `main.js`.
 
 ## Accesibilidad y temas
 
-- Se adapta al tema claro/oscuro del sistema y respeta `prefers-reduced-motion`.
-- Marcado semántico con `main`, `section`, `table` con encabezados, `details`
-  para las preguntas frecuentes, salto al contenido y foco visible.
+- Temas claro y oscuro por tokens, incluido el estado "sistema" sin marcar.
+- `prefers-reduced-motion` respetado, foco visible, salto al contenido.
+- Marcado semántico y datos estructurados `InsuranceAgency` para buscadores.
 
 ## Publicar
 
-Al ser estático, se puede subir tal cual a GitHub Pages, Netlify, Vercel o
-cualquier hosting. No requiere configuración.
+Estático: sube tal cual a GitHub Pages, Netlify, Vercel o el hosting de
+`aseguratubienestar.mx`. No requiere configuración.
